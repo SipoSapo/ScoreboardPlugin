@@ -1,0 +1,10 @@
+name: UHC
+version: 1.0
+main: cat.tuplugin.uhc.UHCPlugin
+api-version: 1.20
+author: SipoSapo
+
+commands:
+  uhc:
+    description: Comandes principals del UHC
+    usage: /uhc start
