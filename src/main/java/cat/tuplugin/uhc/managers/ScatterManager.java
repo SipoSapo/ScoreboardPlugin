@@ -29,7 +29,7 @@ public class ScatterManager {
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.BLINDNESS, 20 * 20, 1));
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.SLOW, 20 * 20, 255));
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.DAMAGE_RESISTANCE, 20 * 20, 255));
-            p.addPotionEffect(new org.bukkit.potion.PotionEffect(PotionEffectType.HEAL, 20 * 20, 255));
+            p.addPotionEffect(new org.bukkit.potion.PotionEffect(PotionEffectType.REGENERATION, 20 * 20, 255));
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.SATURATION, 20 * 20, 255));
 
             p.getInventory().clear();

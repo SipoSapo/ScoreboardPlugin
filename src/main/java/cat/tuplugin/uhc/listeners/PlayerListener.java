@@ -30,6 +30,10 @@ public class PlayerListener implements Listener {
 
         Player victim = event.getEntity();
 
+        String originalMessage = event.getDeathMessage();
+        String customMessage = "§6§lUHC §8» §c" + originalMessage;
+        event.setDeathMessage(customMessage);
+
         for (Player p : Bukkit.getOnlinePlayers()) {
             // Reproduïm el so del Wither (se sent a tot el món)
             // El 1.0f final és el 'pitch' (com de greu o agut és)
@@ -49,7 +53,7 @@ public class PlayerListener implements Listener {
         victim.setGameMode(GameMode.SPECTATOR);
 
         // 4. Missatge de consol
-        victim.sendTitle("§a§l¡HAS MORT!", "§f✯Visca Terra Lliure!✯", 5, 20, 5);
+        victim.sendTitle("§4§l¡HAS MORT!", "§6✯§7Visca Terra Lliure!§6✯", 5, 20, 5);
         victim.sendMessage("§c§lHAS MORT! §fAra ets un espectador.");
         victim.sendMessage("§7Pots volar per veure la resta de la partida.");
     }

@@ -39,7 +39,7 @@ public class GameManager {
                         p.removePotionEffect(PotionEffectType.BLINDNESS);
                         p.removePotionEffect(PotionEffectType.SLOW);
                         p.removePotionEffect(PotionEffectType.JUMP);
-                        p.removePotionEffect(PotionEffectType.HEAL);
+                        p.removePotionEffect(PotionEffectType.REGENERATION);
                         p.removePotionEffect(PotionEffectType.SATURATION);
 
                         p.sendTitle("§a§l¡GO!", "§f✯Gora ETA!✯", 5, 20, 5);
@@ -119,7 +119,7 @@ public class GameManager {
             p.removePotionEffect(PotionEffectType.SLOW);
             p.removePotionEffect(PotionEffectType.JUMP);
             p.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
-            p.removePotionEffect(PotionEffectType.HEAL);
+            p.removePotionEffect(PotionEffectType.REGENERATION);
             p.removePotionEffect(PotionEffectType.SATURATION);
         }
 
