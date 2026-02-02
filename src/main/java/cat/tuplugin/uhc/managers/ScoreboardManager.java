@@ -22,8 +22,22 @@ public class ScoreboardManager {
     }
 
     public void actualitzarScoreboard(Player player, String tempsJoc, String tempsPacte) {
+        // Comprovem si el jugador és vàlid
+        if (player == null || !player.isOnline()) return;
+
         Scoreboard board = player.getScoreboard();
+        if (board == null) {
+            crearScoreboard(player);
+            board = player.getScoreboard();
+        }
+
         Objective obj = board.getObjective("uhc_sidebar");
+
+        // Si l'objectiu no existeix, el creem
+        if (obj == null) {
+            obj = board.registerNewObjective("uhc_sidebar", Criteria.DUMMY, "§6§lULTRA CAF CORE");
+            obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+        }
 
         // Netegem les línies antigues per actualitzar (mètode simple)
         for (String entry : board.getEntries()) {

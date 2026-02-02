@@ -75,11 +75,16 @@ public class TeamManager {
     private void assignarAEquip(String nomId, ChatColor color, Player... jugadors) {
         Team team = board.registerNewTeam("UHC_" + nomId);
         team.setAllowFriendlyFire(true);
-        team.setColor(color); // Això canvia el color del nom sobre el cap
-        team.setPrefix(color + "[" + nomId + "] "); // Prefix amb color al xat
+        team.setColor(color);
+        // Prefix amb color per al tabulador i xat
+        team.setPrefix(color + "[" + nomId + "] " + ChatColor.RESET);
+        team.setSuffix("");
 
         for (Player p : jugadors) {
             team.addEntry(p.getName());
+            // Canviar el color de la nametag sobre el jugador
+            p.setDisplayName(color + p.getName() + ChatColor.RESET);
+            p.setPlayerListName(color + p.getName() + ChatColor.RESET);
             p.sendMessage("§fHas estat assignat a l'equip " + color + nomId);
         }
     }

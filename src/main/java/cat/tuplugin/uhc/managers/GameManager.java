@@ -40,6 +40,10 @@ public class GameManager {
                         p.removePotionEffect(PotionEffectType.SLOW);
                         p.removePotionEffect(PotionEffectType.JUMP);
 
+                        // Clear de l'inventari
+                        p.getInventory().clear();
+                        p.getEnderChest().clear();
+
                         p.sendTitle("§a§l¡GO!", "§fGora ETA!", 5, 20, 5);
                         p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
 
