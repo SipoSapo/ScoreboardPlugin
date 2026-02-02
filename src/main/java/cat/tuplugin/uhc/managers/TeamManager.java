@@ -83,9 +83,7 @@ public class TeamManager {
             // Canviar el color de la nametag sobre el jugador
             p.setDisplayName(color + p.getName() + ChatColor.RESET);
             p.setPlayerListName(color + p.getName() + ChatColor.RESET);
-            // Força que es vegi el display name
-            p.setCustomNameVisible(false);
-            p.setCustomName(null);
+
             p.sendMessage("§fHas estat assignat a l'equip " + color + nomId);
         }
     }

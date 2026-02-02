@@ -4,6 +4,8 @@ import cat.tuplugin.uhc.UHCPluginGame;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;
+import org.bukkit.scoreboard.RenderType;
+import org.bukkit.scoreboard.Criteria;
 
 public class ScoreboardManager {
 
@@ -17,6 +19,7 @@ public class ScoreboardManager {
         Scoreboard board = Bukkit.getScoreboardManager().getNewScoreboard();
         Objective obj = board.registerNewObjective("uhc_sidebar", Criteria.DUMMY, "§6§lULTRA CAF CORE");
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
+        obj.setRenderType(RenderType.INTEGER);
 
         player.setScoreboard(board);
     }
@@ -54,6 +57,8 @@ public class ScoreboardManager {
                     nomCompany = entry;
                     if (partner != null) {
                         vidaCompany = "§c" + (int) partner.getHealth() + " PV";
+                    } else if (!player.isOnline()) {
+                        vidaCompany = "§7DESCONNECTAT";
                     } else {
                         vidaCompany = "§7MORT";
                     }

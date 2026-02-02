@@ -12,7 +12,7 @@ public class ScatterManager {
     private final Random random = new Random();
 
     public void scatterPlayers(World world, int radi) {
-        // Weather clear
+
         world.setStorm(false);
         world.setThundering(false);
         
@@ -20,10 +20,17 @@ public class ScatterManager {
             Location loc = trobarLocalitzacioSegura(world, radi);
             p.teleport(loc);
 
-            // Apliquem ceguesa i llentitud (nivell 255 perquè no es puguin moure)
+            p.setGameMode(GameMode.SURVIVAL);
+
+            p.setLevel(0);
+            p.setExp(0);
+            p.setTotalExperience(0);
+
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.BLINDNESS, 20 * 20, 1));
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.SLOW, 20 * 20, 255));
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.DAMAGE_RESISTANCE, 20 * 20, 255));
+            p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.INSTANT_HEALTH, 20 * 20, 255));
+            p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.SATURATION, 20 * 20, 255));
 
             p.getInventory().clear();
             p.getEnderChest().clear();

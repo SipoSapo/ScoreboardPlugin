@@ -39,10 +39,8 @@ public class GameManager {
                         p.removePotionEffect(PotionEffectType.BLINDNESS);
                         p.removePotionEffect(PotionEffectType.SLOW);
                         p.removePotionEffect(PotionEffectType.JUMP);
-
-                        // Clear de l'inventari
-                        p.getInventory().clear();
-                        p.getEnderChest().clear();
+                        p.removePotionEffect(PotionEffectType.INSTANT_HEALTH);
+                        p.removePotionEffect(PotionEffectType.SATURATION);
 
                         p.sendTitle("§a§l¡GO!", "§fGora ETA!", 5, 20, 5);
                         p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
@@ -69,11 +67,6 @@ public class GameManager {
                 for (Player p : Bukkit.getOnlinePlayers()) {
                     p.sendTitle(color + i, "§fPreparats...", 0, 21, 0);
                     p.playSound(p.getLocation(), Sound.UI_BUTTON_CLICK, 1, 1);
-                }
-
-                for (Player p : Bukkit.getOnlinePlayers()) {
-                    p.setGameMode(GameMode.SURVIVAL);
-                    p.closeInventory();
                 }
 
                 i--;
@@ -125,6 +118,9 @@ public class GameManager {
             p.removePotionEffect(PotionEffectType.BLINDNESS);
             p.removePotionEffect(PotionEffectType.SLOW);
             p.removePotionEffect(PotionEffectType.JUMP);
+            p.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
+            p.removePotionEffect(PotionEffectType.INSTANT_HEALTH);
+            p.removePotionEffect(PotionEffectType.SATURATION);
         }
 
         pvpActiu = true; // Per defecte el PvP està actiu en un món normal
