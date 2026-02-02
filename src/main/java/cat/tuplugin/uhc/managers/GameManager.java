@@ -83,14 +83,17 @@ public class GameManager {
     private BukkitTask partidaTask;
 
     private void iniciarCronometreJoc() {
-        new BukkitRunnable() {
+        this.partidaTask = new BukkitRunnable() {
             @Override
             public void run() {
                 segonsJugats++;
                 if (segonsPacte > 0) segonsPacte--;
                 else if (!pvpActiu) {
                     pvpActiu = true;
-                    Bukkit.broadcastMessage("§c§lUHC §fEl pacte de cavallers ha acabat!");
+                    Bukkit.broadcastMessage("§c§lUHC §8» §fEl pacte de cavallers ha acabat! El PvP està actiu.");
+                    for (World w : Bukkit.getWorlds()) {
+                        w.setPVP(true);
+                    }
                 }
 
                 String tempsJoc = formatTemps(segonsJugats);
@@ -100,7 +103,7 @@ public class GameManager {
                     plugin.getScoreboardManager().actualitzarScoreboard(p, tempsJoc, tempsPacte);
                 }
             }
-        }.runTaskTimer(plugin, 0L, 20L);
+        }.runTaskTimer(plugin, 0L, 20L); // Ara sí que guardem la referència
     }
 
     public void acabarPartida() {

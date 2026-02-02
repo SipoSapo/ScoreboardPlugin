@@ -9,20 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bff847f-5377-4ea8-998b-2bfdba2ab6ba" name="Changes" comment="Primera versio, poc comentat, implementat:&#10;-tp&#10;-efectes&#10;-worldborder&#10;-indispensables(dia, uhcMode, etc)">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ScoreboardPlugin_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/UHCPluginGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/listeners/PlayerListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/ScoreboardManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/TeamManager.java" afterDir="false" />
+    <list default="true" id="7bff847f-5377-4ea8-998b-2bfdba2ab6ba" name="Changes" comment="segona versio, molts de bugs, stop no funciona, s'ha d'arreglar start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/UHCPlugin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/commands/UHCCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/commands/UHCCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/listeners/GameListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/listeners/GameListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/GameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/ScatterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/ScatterManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +92,8 @@
       <workItem from="1767532454563" duration="12121000" />
       <workItem from="1767555560575" duration="16000" />
       <workItem from="1770058066819" duration="6042000" />
-      <workItem from="1770064376088" duration="1315000" />
+      <workItem from="1770064376088" duration="1522000" />
+      <workItem from="1770069643448" duration="2828000" />
     </task>
     <task id="LOCAL-00001" summary="Primera versio, poc comentat, implementat:&#10;-tp&#10;-efectes&#10;-worldborder&#10;-indispensables(dia, uhcMode, etc)">
       <option name="closed" value="true" />
@@ -112,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767537875864</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="segona versio, molts de bugs, stop no funciona, s'ha d'arreglar start">
+      <option name="closed" value="true" />
+      <created>1770066147133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770066147133</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primera versio, poc comentat, implementat:&#10;-tp&#10;-efectes&#10;-worldborder&#10;-indispensables(dia, uhcMode, etc)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primera versio, poc comentat, implementat:&#10;-tp&#10;-efectes&#10;-worldborder&#10;-indispensables(dia, uhcMode, etc)" />
+    <MESSAGE value="segona versio, molts de bugs, stop no funciona, s'ha d'arreglar start" />
+    <option name="LAST_COMMIT_MESSAGE" value="segona versio, molts de bugs, stop no funciona, s'ha d'arreglar start" />
   </component>
 </project>
