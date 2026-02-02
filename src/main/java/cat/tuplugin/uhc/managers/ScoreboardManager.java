@@ -56,7 +56,7 @@ public class ScoreboardManager {
                     Player partner = Bukkit.getPlayer(entry);
                     nomCompany = entry;
                     if (partner != null) {
-                        vidaCompany = "§c" + (int) partner.getHealth() + " PV";
+                        vidaCompany = "§c" + ((int) partner.getHealth())/2 + " ❤";
                     } else if (!player.isOnline()) {
                         vidaCompany = "§7DESCONNECTAT";
                     } else {

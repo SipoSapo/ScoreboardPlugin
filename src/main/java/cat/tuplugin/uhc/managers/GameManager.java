@@ -39,10 +39,10 @@ public class GameManager {
                         p.removePotionEffect(PotionEffectType.BLINDNESS);
                         p.removePotionEffect(PotionEffectType.SLOW);
                         p.removePotionEffect(PotionEffectType.JUMP);
-                        p.removePotionEffect(PotionEffectType.INSTANT_HEALTH);
+                        p.removePotionEffect(PotionEffectType.HEAL);
                         p.removePotionEffect(PotionEffectType.SATURATION);
 
-                        p.sendTitle("§a§l¡GO!", "§fGora ETA!", 5, 20, 5);
+                        p.sendTitle("§a§l¡GO!", "§f✯Gora ETA!✯", 5, 20, 5);
                         p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
 
                         // Creem la sidebar al moment de començar
@@ -119,7 +119,7 @@ public class GameManager {
             p.removePotionEffect(PotionEffectType.SLOW);
             p.removePotionEffect(PotionEffectType.JUMP);
             p.removePotionEffect(PotionEffectType.DAMAGE_RESISTANCE);
-            p.removePotionEffect(PotionEffectType.INSTANT_HEALTH);
+            p.removePotionEffect(PotionEffectType.HEAL);
             p.removePotionEffect(PotionEffectType.SATURATION);
         }
 

@@ -1,10 +1,7 @@
 package cat.tuplugin.uhc.listeners;
 
 import cat.tuplugin.uhc.UHCPluginGame;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -32,7 +29,15 @@ public class PlayerListener implements Listener {
         if (!plugin.getGameManager().isPartidaActiva()) return;
 
         Player victim = event.getEntity();
-        
+
+        for (Player p : Bukkit.getOnlinePlayers()) {
+            // Reproduïm el so del Wither (se sent a tot el món)
+            // El 1.0f final és el 'pitch' (com de greu o agut és)
+            p.playSound(p.getLocation(), Sound.ENTITY_WITHER_DEATH, 1.0f, 1.0f);
+
+            // Si vols un so encara més "èpic", pots afegir el del llampec:
+            // p.playSound(p.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1.0f, 0.8f);
+        }
         // Guardem la localització de mort
         deathLocations.put(victim.getUniqueId(), victim.getLocation());
 
@@ -44,6 +49,7 @@ public class PlayerListener implements Listener {
         victim.setGameMode(GameMode.SPECTATOR);
 
         // 4. Missatge de consol
+        victim.sendTitle("§a§l¡HAS MORT!", "§f✯Visca Terra Lliure!✯", 5, 20, 5);
         victim.sendMessage("§c§lHAS MORT! §fAra ets un espectador.");
         victim.sendMessage("§7Pots volar per veure la resta de la partida.");
     }
