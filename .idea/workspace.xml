@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ScoreboardPlugin:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bff847f-5377-4ea8-998b-2bfdba2ab6ba" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/UHCPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/commands/UHCCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/listeners/GameListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/GameManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/ScatterManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    <list default="true" id="7bff847f-5377-4ea8-998b-2bfdba2ab6ba" name="Changes" comment="Primera versio, poc comentat, implementat:&#10;-tp&#10;-efectes&#10;-worldborder&#10;-indispensables(dia, uhcMode, etc)">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ScoreboardPlugin_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/UHCPluginGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/listeners/PlayerListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/ScoreboardManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/TeamManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/UHCPlugin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/commands/UHCCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/commands/UHCCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/listeners/GameListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/listeners/GameListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/ScatterManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cat/tuplugin/uhc/managers/ScatterManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,35 +39,51 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SipoSapo&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/SipoSapo/ScoreboardPlugin.git&quot;,
+    &quot;accountId&quot;: &quot;27a86fa7-93e1-4337-abd1-dcf6f5512de0&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="37nIYBWDh3US4NS9p4Yc8cejBED" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.uhc [package].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.uhc [package].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -76,11 +99,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1767532453333</updated>
-      <workItem from="1767532454563" duration="4905000" />
+      <workItem from="1767532454563" duration="12121000" />
+      <workItem from="1767555560575" duration="16000" />
+      <workItem from="1770058066819" duration="6042000" />
+      <workItem from="1770064376088" duration="1315000" />
     </task>
+    <task id="LOCAL-00001" summary="Primera versio, poc comentat, implementat:&#10;-tp&#10;-efectes&#10;-worldborder&#10;-indispensables(dia, uhcMode, etc)">
+      <option name="closed" value="true" />
+      <created>1767537875864</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1767537875864</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primera versio, poc comentat, implementat:&#10;-tp&#10;-efectes&#10;-worldborder&#10;-indispensables(dia, uhcMode, etc)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primera versio, poc comentat, implementat:&#10;-tp&#10;-efectes&#10;-worldborder&#10;-indispensables(dia, uhcMode, etc)" />
   </component>
 </project>

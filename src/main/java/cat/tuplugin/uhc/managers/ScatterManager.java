@@ -6,6 +6,7 @@ import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
+import org.bukkit.potion.PotionEffectType;
 
 import java.util.Random;
 
@@ -21,7 +22,7 @@ public class ScatterManager {
             // Apliquem ceguesa i llentitud (nivell 255 perquè no es puguin moure)
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.BLINDNESS, 20 * 20, 1));
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.SLOW, 20 * 20, 255));
-
+            p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.DAMAGE_RESISTANCE, 20 * 20, 255));
 
             p.sendMessage("§aHas estat enviat a: §f" + loc.getBlockX() + ", " + loc.getBlockZ());
 
