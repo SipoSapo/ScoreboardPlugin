@@ -15,6 +15,10 @@ public class ScatterManager {
     private final Random random = new Random();
 
     public void scatterPlayers(World world, int radi) {
+        // Weather clear
+        world.setStorm(false);
+        world.setThundering(false);
+        
         for (Player p : Bukkit.getOnlinePlayers()) {
             Location loc = trobarLocalitzacioSegura(world, radi);
             p.teleport(loc);
@@ -23,6 +27,11 @@ public class ScatterManager {
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.BLINDNESS, 20 * 20, 1));
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.SLOW, 20 * 20, 255));
             p.addPotionEffect(new org.bukkit.potion.PotionEffect(org.bukkit.potion.PotionEffectType.DAMAGE_RESISTANCE, 20 * 20, 255));
+
+            p.getInventory().clear();
+            p.getEnderChest().clear();
+
+            p.setGameMode(GameMode.SURVIVAL);
 
             p.sendMessage("§aHas estat enviat a: §f" + loc.getBlockX() + ", " + loc.getBlockZ());
 
