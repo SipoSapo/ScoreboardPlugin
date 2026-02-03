@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/ScoreboardPlugin_jar</output-path>
     <root id="archive" name="ScoreboardPlugin.jar">
       <element id="module-output" name="Uhc_Plugin" />
+      <element id="module-output" name="uhc" />
     </root>
   </artifact>
 </component>

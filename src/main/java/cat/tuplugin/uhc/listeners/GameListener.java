@@ -12,7 +12,6 @@ public class GameListener implements Listener {
 
     private final UHCPluginGame plugin;
 
-    // Aquest és el constructor que faltava:
     public GameListener(UHCPluginGame plugin) {
         this.plugin = plugin;
     }

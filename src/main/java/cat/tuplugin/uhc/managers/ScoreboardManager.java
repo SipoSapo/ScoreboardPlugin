@@ -49,15 +49,19 @@ public class ScoreboardManager {
         Team team = Bukkit.getScoreboardManager().getMainScoreboard().getEntryTeam(player.getName());
         String nomCompany = "Cap";
         String vidaCompany = "N/A";
+        String colorCompany = "§a";
 
         if (team != null) {
+            if (team.getColor() != null) {
+                colorCompany = team.getColor().toString();
+            }
             for (String entry : team.getEntries()) {
-                if (!entry.equals(player.getName())) { // Si no sóc jo, és el meu company
+                if (!entry.equals(player.getName())) {
                     Player partner = Bukkit.getPlayer(entry);
                     nomCompany = entry;
                     if (partner != null) {
                         vidaCompany = "§c" + ((int) partner.getHealth())/2 + " ❤";
-                    } else if (!player.isOnline()) {
+                    } else if (!partner.isOnline()) {
                         vidaCompany = "§7DESCONNECTAT";
                     } else {
                         vidaCompany = "§7MORT";
@@ -71,10 +75,10 @@ public class ScoreboardManager {
         obj.getScore("§fTemps: §e" + tempsJoc).setScore(9);
         obj.getScore("§fPacte: §b" + tempsPacte).setScore(8);
         obj.getScore(" ").setScore(7);
-        obj.getScore("§fCompany: §a" + nomCompany).setScore(6);
+        obj.getScore("§fCompany: " + colorCompany + nomCompany).setScore(6);
         obj.getScore("§fVida: " + vidaCompany).setScore(5);
         obj.getScore("  ").setScore(4);
-        obj.getScore("§d§o\"Eng. punta de llança!\"").setScore(3); // La teva frase
+        obj.getScore("§d§o\"Eng. punta de llança!\"").setScore(3);
         obj.getScore("§7---------------- ").setScore(2);
     }
 }

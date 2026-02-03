@@ -25,7 +25,6 @@ public class GameManager {
         this.plugin = plugin;
     }
 
-    // AQUEST ÉS EL MÈTODE QUE ET SURTIA EN ROIG
     public void iniciarCompteEnrere(int segons) {
         new BukkitRunnable() {
             int i = segons;
@@ -33,7 +32,6 @@ public class GameManager {
             @Override
             public void run() {
                 if (i <= 0) {
-                    // QUAN ACABA EL COMPTE ENRERE, COMENCEM LA PARTIDA REAL
                     plugin.getTeamManager().crearEquipsFinals();
                     for (Player p : Bukkit.getOnlinePlayers()) {
                         p.removePotionEffect(PotionEffectType.BLINDNESS);
@@ -42,27 +40,26 @@ public class GameManager {
                         p.removePotionEffect(PotionEffectType.REGENERATION);
                         p.removePotionEffect(PotionEffectType.SATURATION);
 
-                        p.sendTitle("§a§l¡GO!", "§f✯Gora ETA!✯", 5, 20, 5);
+                        p.sendTitle("§a§l¡GO!", "§6✯ §7Gora ETA! §6✯", 5, 20, 5);
                         p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
 
-                        // Creem la sidebar al moment de començar
                         plugin.getScoreboardManager().crearScoreboard(p);
                     }
                     assignarParellesAleatories();
-                    iniciarCronometreJoc(); // Engeguem el temps de joc i pacte
+                    iniciarCronometreJoc();
 
                     this.cancel();
                     return;
                 }
+
                 if (i == 5) {
                     for (Player p : Bukkit.getOnlinePlayers()) {
                         p.removePotionEffect(PotionEffectType.BLINDNESS);
-                        p.sendMessage("§6§lUHC §8» §fJa pots veure el teu voltant. Prepareu-vos!");
+                        p.sendMessage("§6§lUHC §8» §fJa pots veure el teu voltant. Prepara't!");
                         p.playSound(p.getLocation(), Sound.BLOCK_NOTE_BLOCK_BELL, 1, 1);
                     }
                 }
 
-                // Efectes visuals del compte enrere
                 String color = (i <= 3) ? "§c" : "§e";
                 for (Player p : Bukkit.getOnlinePlayers()) {
                     p.sendTitle(color + i, "§fPreparats...", 0, 21, 0);
@@ -96,23 +93,21 @@ public class GameManager {
                     plugin.getScoreboardManager().actualitzarScoreboard(p, tempsJoc, tempsPacte);
                 }
             }
-        }.runTaskTimer(plugin, 0L, 20L); // Ara sí que guardem la referència
+        }.runTaskTimer(plugin, 0L, 20L);
     }
 
     public void acabarPartida() {
-        // 1. Aturem el cronòmetre
+
         if (partidaTask != null) {
             partidaTask.cancel();
             partidaTask = null;
         }
 
-        // 2. Tornem a posar les regles normals
         for (World world : Bukkit.getWorlds()) {
             world.setGameRule(org.bukkit.GameRule.NATURAL_REGENERATION, true);
-            world.getWorldBorder().setSize(30000000); // Mida per defecte de Minecraft
+            world.getWorldBorder().setSize(30000000);
         }
 
-        // 3. Netegem sidebars i efectes de tothom
         for (Player p : Bukkit.getOnlinePlayers()) {
             p.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard()); // Sidebar buida
             p.removePotionEffect(PotionEffectType.BLINDNESS);
@@ -123,7 +118,7 @@ public class GameManager {
             p.removePotionEffect(PotionEffectType.SATURATION);
         }
 
-        pvpActiu = true; // Per defecte el PvP està actiu en un món normal
+        pvpActiu = true;
         segonsJugats = 0;
         segonsPacte = 3600;
     }
